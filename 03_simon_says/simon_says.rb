@@ -6,10 +6,10 @@ def shout(word)
   word.upcase
 end
 
-def repeat(word,n=1)
-  return word + " " + word if n == 1
-  ans = word
-  (n-1).times {ans += " " + word}
+def repeat(word,n=2)
+  ans = ""
+  (n-1).times {ans += word + " "}
+  ans += word
   return ans
 end
 
