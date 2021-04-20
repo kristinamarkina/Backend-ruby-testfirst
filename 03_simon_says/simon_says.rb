@@ -1,3 +1,7 @@
+ARTICLES = %w[the a an]
+CONJUNCTIONS = %w[for and nor but or yet so]
+PREPOSITIONS = %w[to from over under on in of]
+
 def echo(word)
   word
 end
@@ -22,12 +26,26 @@ def first_word(word)
   word[0..first_space-1]
 end
 
+def capitalize?(word)
+  if ARTICLES.include? word
+    return false
+  end
+  if  CONJUNCTIONS.include? word
+    return false
+  end
+  if  PREPOSITIONS.include? word
+    return false
+  end
+  return true
+end
+
 def titleize(string)
   arr = string.split
   arr[0].capitalize!
   arr.each do |word|
-    word.capitalize! if word.length > 4
+    if capitalize?(word) == true
+      word.capitalize!
+    end
   end
-  arr[-1].capitalize!
   arr.join(" ")
 end
