@@ -12,9 +12,12 @@ def sum(arr)
   return sum
 end
 
-def multiply(a,b)
-  a*b
+def multiply(arr)
+  res = 1
+  arr.each {|a| res *= a}
+  return res
 end
+
 
 def power(a,n)
   a**n

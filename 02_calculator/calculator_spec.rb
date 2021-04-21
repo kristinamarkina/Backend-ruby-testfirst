@@ -82,10 +82,9 @@ describe "#multiply" do
   it "multiplies two numbers" do
     expect(multiply(-1,8)).to eq(-8)
     end
-  #{it "multiplies several numbers" do
+  # it "multiplies several numbers" do
   #  expect(multiply(1,2,3)).to eq(raise_error)
-  #end}"
-  
+  # end
 end
 
 describe "#power" do
